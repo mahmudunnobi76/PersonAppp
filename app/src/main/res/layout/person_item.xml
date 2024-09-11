@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp"
+    app:cardMaxElevation="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/personImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@color/black"
+            app:civ_border_color="#03A9F4"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/personName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Name"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/personImg"
+            app:layout_constraintTop_toTopOf="@+id/personImg" />
+
+        <TextView
+            android:id="@+id/personCourse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Course: "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/personCenter"
+            app:layout_constraintEnd_toEndOf="@+id/personName"
+            app:layout_constraintStart_toStartOf="@+id/personName"
+            app:layout_constraintTop_toBottomOf="@+id/personName" />
+
+        <TextView
+            android:id="@+id/personCenter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="center: "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/personImg"
+            app:layout_constraintEnd_toEndOf="@+id/personCourse"
+            app:layout_constraintStart_toStartOf="@+id/personCourse" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
